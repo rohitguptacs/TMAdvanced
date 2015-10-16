@@ -1,5 +1,4 @@
 #############################################################################
-#TMAdvanced: A tool to retrive semantically similar matches from a  Translation Memory using paraphrases
  Copyright (C) 2015 Rohit Gupta, University of Wolverhampton.
 
  Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,6 +13,7 @@
   See the License for the specific language governing permissions and
   limitations under the License.
  
+#TMAdvanced: A tool to retrive semantically similar matches from a  Translation Memory using paraphrases
 ############################################################################
 
 
@@ -28,18 +28,22 @@ Human Evaluations: Rohit Gupta, Constantin Orasan, Marcos Zampieri, Mihaela Vela
 java >= 1.7
 
 ##Libraries
-[Stanford postagger-3.4.1](http://nlp.stanford.edu/software/stanford-postagger-2014-08-27.zip) Used only for tokenization
-[BerkeleyParser](https://github.com/slavpetrov/berkeleyparser) Used only for tokenization
+- [Stanford postagger-3.4.1](http://nlp.stanford.edu/software/stanford-postagger-2014-08-27.zip) Used only for tokenization
+
+- [BerkeleyParser](https://github.com/slavpetrov/berkeleyparser) Used only for tokenization
 
 ##Resources
-This code uses lexical and phrasal paraphrases from [PPDB:Paraphrase database](http://www.cis.upenn.edu/~ccb/ppdb/). More details can be found [here](http://www.cis.upenn.edu/~ccb/ppdb/).
+- This code uses lexical and phrasal paraphrases from [PPDB:Paraphrase database](http://www.cis.upenn.edu/~ccb/ppdb/). More details can be found [here](http://www.cis.upenn.edu/~ccb/ppdb/).
  
 ##Running
-java -jar TMAdvanced.jar -pp <paraphrase file> -tms <TM file> -ins <Input file> -inslang <input source language> -intlang <input target language> -tmslang <TM source language> -tmtlang <TM target language> -o <output file name>
-
+Run the following:
+```
+java -jar TMAdvanced.jar -pp paraphrase_file -tms TM_file -ins Input_file -inslang input_source_language -intlang input_target_language -tmslang TM_source_language -tmtlang TM_target_language> -o output_file_name
+```
 ##Help
+```
 java -jar -h
-
+```
 Above command will display the options you can provide
 Provide all mandatory options to run, output will be in the file "file_name.tmx" where file_name is provided by -o  
 Please refer sample1.sh or sample2.sh for a sample run
@@ -48,13 +52,13 @@ The options available are also given below:
 ("\nOptions are case sensitive, -ins en-US and -ins EN-US are different. Also -INS or Ins are invalid options. ");
 
 ####Valid input formats:
-xliff
-txt (require file with one segment per line)
-tmx 
+- xliff
+- txt (require file with one segment per line)
+- tmx 
 
 ####Valid TM formats:
-tmx
-txt (require two files with one segment per line (source and target segment aligned))  
+- tmx
+- txt (require two files with one segment per line (source and target segment aligned))  
 
 ###Mandatory Parameters:
         -tms: TM source file name (tmx file with .tmx extension  or txt file with each segment per line) [mandatory][e.g. -tms sampleTM.tmx]
