@@ -44,12 +44,11 @@ java -jar TMAdvanced.jar -pp paraphrase_file -tms TM_file -ins Input_file -insla
 ```
 java -jar -h
 ```
-Above command will display the options you can provide
-Provide all mandatory options to run, output will be in the file "file_name.tmx" where file_name is provided by -o  
-Please refer sample1.sh or sample2.sh for a sample run
+Above command will display the options you can provide. Please provide all mandatory options to run, output will be in the file "file_name.tmx" where file_name is provided by -o  
+Please refer sample1.sh or sample2.sh for a sample run.
 
 The options available are also given below:
-("\nOptions are case sensitive, -ins en-US and -ins EN-US are different. Also -INS or Ins are invalid options. ");
+(Options are case sensitive, -ins en-US and -ins EN-US are different. Also -INS or Ins are invalid options.)
 
 ####Valid input formats:
 - xliff
@@ -60,7 +59,7 @@ The options available are also given below:
 - tmx
 - txt (require two files with one segment per line (source and target segment aligned))  
 
-###Mandatory Parameters:
+####Mandatory Parameters:
         -tms: TM source file name (tmx file with .tmx extension  or txt file with each segment per line) [mandatory][e.g. -tms sampleTM.tmx]
         -tmt: TM target file name (txt with each segment per line) [mandatory if -tms is a txt file and not required for tmx][e.g. -tmt sampleTM.txt]
         -ins: Input source file name (xliff file with .xliff extension or tmx file with .tmx extension or txt file with each segment per line) [mandatory][e.g. -ins sampleInput.tmx]
@@ -71,7 +70,7 @@ The options available are also given below:
         -tmtlang: Please provide Translation Memory target language [mandatory][e.g. -tmtlang es-ES]
         -o: Output file name [mandatory][e.g. -o myparatm]
         
-###Optional Parameters:
+####Optional Parameters:
         -int: Input target file name (txt with each segment per line) [note: this option is used for research only] [mandatory if -tms is a txt file, please provide the corresponding target file]
         -lth: Threshold for filtering based on length [ignored when -filtering off][optional, default: 39.0 ]
         -bth: Threshold for filtering based on maximum gap allowed in edit-distance(beam threshold)[ignored when -filtering off][optional, default: 35.0 ]
@@ -84,7 +83,7 @@ The options available are also given below:
         -typp: Types of paraphrasing (comma separated e.g. -typp 1,2 (note: no space between options -typp 1,2 and not -typp 1, 2 or -typp 1 , 2  )) [optional, default: all four types of paraphrases 1,2,3,4]
         -infolevel: 0 for less information, 1 for moderate information and 2 for huge information e.g. -infolevel 1) [optional, default: 0, less information]
 
-###Print Help:
+####Print Help:
         -h or -help: Print this information
 
  
