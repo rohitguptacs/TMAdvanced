@@ -30,184 +30,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //  ReadXliffFile xliff=new ReadXliffFile("//Users//rohit//expert//hermes//Files//Trans_KES.xml");
-        //  ReadTMXFile tmx=new ReadTMXFile("//Users//rohit//expert//hermes//Files//TM_KES.tmx", "en-US", "es-ES");
-        //boolean placeholder = false;
-      /*  boolean phTag = true;
-        boolean phPunc = true;
-        boolean phNum = false;
-        boolean paraphrasing = false;
-        //boolean enabledouble = false;
-        boolean filtering = true;
-       // boolean enableNE = false;
-        boolean retrieveAll = false;
-        String NEtagger = "no";
-        int nbestsize = 100;
-        String tmsrcfilename = "";
-        String ppfilename = "<Paraphrasing disabled>";
-        String tmtgtfilename = "";
-        String inputfilename = "";
-        String inputtgtfilename = "";
-        String outfilename = "";
-        double lenTH = 39.0;
-        double beamTH = 35.0;
-        double tmTH = 39.0;
-        short[] typp = {1, 2, 3, 4};
-        String inputformat = "plain";
-        String TMformat = "plain";
-        ////////////////valid formats////////////////////
-        List<String> validformats = new ArrayList();
-        validformats.add("plain");
-        validformats.add("tmx");
-        validformats.add("xliff");
-        double[] pppenalties = {0, 0, 0, 0};
-        String tokenizer = "stanford";
-        String inputSourceLanguage = "EN-US";
-        String inputTargetLanguage = "ES-ES";
-        String TMSourceLanguage = "EN-US";
-        String TMTargetLanguage = "ES-ES";
-        int infolevel=0;
-*/
-        /*
-         args=new String[12];
-         args[0]="-tmth";
-         args[1]="65.00";
-         args[2]="-tms";
-         args[3]="//Users//rohit//expert//programs//corpus//NEtesting//enfr.en.5000.txt";
-         args[4]="-tmt";
-         args[5]="//Users//rohit//expert//programs//corpus//NEtesting//enfr.fr.5000.txt";
-         args[6]="-ins";
-         args[7]="//Users//rohit//expert//programs//corpus//NEtesting//enfr.en.500.txt";
-         args[8]="-int";
-         args[9]="//Users//rohit//expert//programs//corpus//NEtesting//enfr.en.500.txt";
-         args[10]="-o";
-         args[11]="//Users//rohit//expert//programs//corpus//NEtesting//NE500.xml";
-         */
-        /*
-         args=new String[22];
-         args[0]="-bth";
-         args[1]="35.0";
-         args[2]="-lth";
-         args[3]="49.0";
-         args[4]="-nb";
-         args[5]="100";
-         args[6]="-tmth";
-         args[7]="65.00";
-         args[8]="-pp";
-         args[9]="//Users//rohit//expert//corpusparaphrase//ppdbllexlphrasal.txt";
-         args[10]="-tms";
-         args[11]="//Users//rohit//expert//programs//corpus//test13//2011.en.txt";
-         args[12]="-tmt";
-         args[13]="//Users//rohit//expert//programs//corpus//test13//2011.fr.txt";
-         args[14]="-ins";
-         args[15]="//Users//rohit//expert//programs//corpus//test13//2013.en.txt";
-         args[16]="-int";
-         args[17]="//Users//rohit//expert//programs//corpus//test13//2013.fr.txt";
-         args[18]="-o";
-         args[19]="//Users//rohit//expert//programs//corpus//test13//2013tmp.xml";
-         args[20]="-typp";
-         args[21]="1,2,3,4";
-         // args[22]="-pholder";
-         */
-        /*
-         args=new String[38];
-         args[0]="-bth";
-         args[1]="35.0";
-         args[2]="-lth";
-         args[3]="39.0";
-         args[4]="-nb";
-         args[5]="100";
-         args[6]="-tmth";
-         args[7]="39.00";
-         args[8]="-pp";
-         args[9]="//Users//rohit//expert//corpusparaphrase//ppdbllexlphrasal.txt";
-      //   args[9]="//Users//rohit//expert//hermes//tmadvanced//ppdbllexlphrasalTest.txt";
-         
-         args[10]="-tms";
-
-         // args[11]="//Users//rohit//expert//hermes//test1//TM_KESv1.1.xml";
-         args[11]="//Users//rohit//expert//hermes//test2//MSFT_EN_ES1.0.utf8.xml";
-        // args[11]="//Users//rohit//expert//hermes//test2//sampleTM.tmx";
-       //  args[11]="//Users//rohit//expert//hermes//tmadvanced//testTM.tmx";
-         args[12]="-tmt";
-         //args[13]="//Users//rohit//expert//hermes//test1//TM_KESv1.1.xml";
-        //  args[13]="//Users//rohit//expert//hermes//test2//sampleTM.tmx";
-         args[13]="//Users//rohit//expert//hermes//test2//MSFT_EN_ES1.0.utf8.xml";
-        // args[13]="//Users//rohit//expert//hermes//tmadvanced//testTM.tmx";
-         args[14]="-ins";
-         //args[15]="//Users//rohit//expert//hermes//test1//Trans_KESv1.0.xml";
-         args[15]="//Users//rohit//expert//hermes//test1//Trans_KES144.xml";
-        
-         // args[15]="//Users//rohit//expert//hermes//test5//4Rohit_Input.xml";
-         args[16]="-int";
-         //args[17]="//Users//rohit//expert//hermes//test1//Trans_KESv1.0.xml";
-         args[17]="//Users//rohit//expert//hermes//test1//Trans_KES144.xml";
-       
-         // args[17]="//Users//rohit//expert//hermes//test5//4Rohit_Input.xml";
-         args[18]="-o";
-         args[19]="//Users//rohit//expert//hermes//test5//4Rohit_Input_MSFT_.toksf_out.xml";
-         //args[19]="//Users//rohit//expert//hermes//test2//MSFT_EN_ES_out.xml";
-         args[20]="-typp";
-         args[21]="1,2,3,4";
-         args[22]="-filtering";
-         args[23]="on";
-         args[24]="-inf";
-         args[25]="xliff";
-         args[26]="-tmf";
-         args[27]="tmx";
-         args[28]="-pholder";
-         args[29]="off";
-         args[30]="-inslang";
-         args[31]="EN-US";
-         args[32]="-intlang";
-         args[33]="ES-ES";
-         args[34]="-tmslang";
-         args[35]="EN-US";
-         args[36]="-tmtlang";
-         args[37]="ES-EM";
-         */
-        /*
-         args=new String[38];
-         args[0]="-bth";
-         args[1]="35.0";
-         args[2]="-lth";
-         args[3]="39.0";
-         args[4]="-nb";
-         args[5]="100";
-         args[6]="-tmth";
-         args[7]="39.00";
-         args[8]="-pp";
-         args[9]="//Users//rohit//expert//corpusparaphrase//ppdbllexlphrasal.txt";
-         args[10]="-tms";
-         args[11]="//Users//rohit//expert//hermes//tmadvanced//sampleTM.tmx";
-         args[12]="-tmt";
-         args[13]="//Users//rohit//expert//hermes//tmadvanced//sampleTM.tmx";
-         args[14]="-ins";
-         args[15]="//Users//rohit//expert//hermes//tmadvanced//sampleInput.tmx";
-         args[16]="-int";
-         args[17]="//Users//rohit//expert//hermes//tmadvanced//sampleInput.tmx";
-         args[18]="-o";
-         args[19]="//Users//rohit//expert//hermes//tmadvanced//sampletest";
-         args[20]="-typp";
-         args[21]="1,2,3,4";
-         args[22]="-filtering";
-         args[23]="on";
-         args[24]="-inf";
-         args[25]="tmx";
-         args[26]="-tmf";
-         args[27]="tmx";
-         args[28]="-pholder";
-         args[29]="off";
-         args[30]="-inslang";
-         args[31]="EN-US";
-         args[32]="-intlang";
-         args[33]="ES-ES";
-         args[34]="-tmslang";
-         args[35]="en-US";
-         args[36]="-tmtlang";
-         args[37]="es-ES";
-         
-         */
+      
         
         
         if(args.length<1){
@@ -217,24 +40,6 @@ public class Main {
         }
         for (int i = 0; i < args.length; i++) {
 
-            // System.err.println("Processing:"+args[i]);
-           /* if ("-ne".equals(args[i]) || "".equals(args[i])) {
-                if (args.length <= i + 1 || args[i + 1].startsWith("-")) {
-                    System.err.println("Please provide option (on/off) for -ne flag (Named Entity)");
-                    System.exit(1);
-                } else {
-                    if (args[i + 1].toLowerCase().equals("on")) {
-                        enableNE = true;
-                        i++;
-                    } else if (args[i + 1].toLowerCase().equals("off")) {
-                        enableNE = false;
-                        i++;
-                    } else {
-                        System.err.println("Please provide valid option (on/off) for -ne flag(Named Entity)");
-                        System.exit(1);
-                    }
-                }
-            }else*/ 
             if ("-rall".equals(args[i])) {
                 if (args.length <= i + 1 || args[i + 1].startsWith("-")) {
                     System.err.println("Error:Please provide option (on/off) for -rall flag");
@@ -474,44 +279,11 @@ public class Main {
         checkMandatoryParameters();
         
         System.err.println("Calling with following parameters:");
-       /*
-        Parameters p = new Parameters(
-                TMformat,
-                inputformat,
-                inputSourceLanguage,
-                inputTargetLanguage,
-                TMSourceLanguage,
-                TMTargetLanguage,
-                tmsrcfilename,
-                tmtgtfilename,
-                inputfilename,
-                inputtgtfilename,
-               // placeholder,
-                phTag,
-                phPunc,
-                        phNum,
-                paraphrasing,
-                typp,
-                pppenalties,//={0,0,0,0};
-                filtering,
-                lenTH,
-                beamTH,
-                tmTH,
-                nbestsize,
-                ppfilename,
-                outfilename,
-                tokenizer,
-                NEtagger,
-                retrieveAll,
-                infolevel
-        );*/
-
+       
         Parameters.printParameters();
         EDMatch edmatch= new EDMatch();//.efficientparaphrasing(p);
 
-        //Parameters p= new Parameters(TMformat,inputformat,"EN-US","ES-EM",enableNE,typp,enabledouble,placeholder,paraphrasing, filtering,lenTH,beamTH,tmTH,nbestsize,ppfilename,tmsrcfilename,tmtgtfilename,inputfilename ,inputtgtfilename,outfilename,pppenalties);
-        //  efficientparaphrasing(TMformat,inputformat,pppenalties,"EN-US","ES-EM",enableNE,typp,enabledouble,placeholder,paraphrasing, filtering,lenTH,beamTH,tmTH,nbestsize,ppfilename,tmsrcfilename,tmtgtfilename,inputfilename ,inputtgtfilename,outfilename);
-//        retrievalimprove75(outfilename);
+    
     }
     
      private static String retrieveFormat(String filename){
