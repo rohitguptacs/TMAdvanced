@@ -70,7 +70,7 @@ The options available are also given below:
         
 #### Optional Parameters:
         -int: Input target file name (txt with each segment per line) [note: this option is used for research only] [mandatory if -tms is a txt file, please provide the corresponding target file]   
--lth: Threshold for filtering based on length [ignored when -filtering off][optional, default: 39.0 ]
+	-lth: Threshold for filtering based on length [ignored when -filtering off][optional, default: 39.0 ]
         -bth: Threshold for filtering based on maximum gap allowed in edit-distance(beam threshold)[ignored when -filtering off][optional, default: 35.0 ]
         -tmth: Cut off threshold for TM matching, only segments having similarity above this threshold will be used for paraphrasing [ignored when -filtering off][optional, default: 39.0 ]
         -nb: N-best-list size (e.g. if -nb 100, not more than top 100 candidates participate for paraphrasing) [ignored when -filtering off][optional, default: 100 ]
