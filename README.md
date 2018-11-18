@@ -15,8 +15,6 @@
  
 # TMAdvanced: A tool to retrive semantically similar matches from a  Translation Memory using paraphrases
 # ###########################################################################
-
-
 Current Translation Memory (TM) systems work at the surface level and lack semantic knowledge while matching. This tool implements an approach to incorporating semantic knowledge in the form of paraphrasing in matching and retrieval. Most of the TMs use Levenshtein edit- distance or some variation of it. This tool implements an efficient approach to incorporating paraphrasing with edit-distance. The approach is based on greedy approximation and dynamic programming. We have obtained significant improvement in both retrieval and translation of retrieved segments. 
 More details about the approach and evaluations given in the following publications:
 
@@ -32,7 +30,7 @@ java >= 1.7
 
 - [BerkeleyParser](https://github.com/slavpetrov/berkeleyparser) Used only for tokenization
 
-##Resources
+## Resources
 - This code uses lexical and phrasal paraphrases from [PPDB:Paraphrase database](http://www.cis.upenn.edu/~ccb/ppdb/). More details can be found [here](http://www.cis.upenn.edu/~ccb/ppdb/).
  
 ## Running
@@ -60,36 +58,27 @@ The options available are also given below:
 - txt (require two files with one segment per line (source and target segment aligned))  
 
 #### Mandatory Parameters:
-	- -tms: TM source file name (tmx file with .tmx extension  or txt file with each segment per line) [mandatory][e.g. -tms sampleTM.tmx]
-	- -tmt: TM target file name (txt with each segment per line) [mandatory if -tms is a txt file and not required for tmx][e.g. -tmt sampleTM.txt]
-	- -ins: Input source file name (xliff file with .xliff extension or tmx file with .tmx extension or txt file with each segment per line) [mandatory][e.g. -ins sampleInput.tmx]
-	- -pp: paraphrasing file name (-pp yourparaphrasefile.txt [please check sample paraphrase file for the format]) [mandatory]
-	- -inslang: Please provide input (language of file you want to translate) source language [mandatory][e.g. -inslang en-US]
-	- -intlang: Please provide input target language (the language in which you want to translate) [mandatory][e.g. -intlang es-ES]
-	- -tmslang: Please provide Translation Memory source language [mandatory][e.g. -tmslang en-US]
-	- -tmtlang: Please provide Translation Memory target language [mandatory][e.g. -tmtlang es-ES]
-	- -o: Output file name [mandatory][e.g. -o myparatm]
+	 -tms: TM source file name (tmx file with .tmx extension  or txt file with each segment per line) [mandatory][e.g. -tms sampleTM.tmx]
+	 -tmt: TM target file name (txt with each segment per line) [mandatory if -tms is a txt file and not required for tmx][e.g. -tmt sampleTM.txt]
+	 -ins: Input source file name (xliff file with .xliff extension or tmx file with .tmx extension or txt file with each segment per line) [mandatory][e.g. -ins sampleInput.tmx]
+	 -pp: paraphrasing file name (-pp yourparaphrasefile.txt [please check sample paraphrase file for the format]) [mandatory]
+	 -inslang: Please provide input (language of file you want to translate) source language [mandatory][e.g. -inslang en-US]
+	 -intlang: Please provide input target language (the language in which you want to translate) [mandatory][e.g. -intlang es-ES]
+	 -tmslang: Please provide Translation Memory source language [mandatory][e.g. -tmslang en-US]
+	 -tmtlang: Please provide Translation Memory target language [mandatory][e.g. -tmtlang es-ES]
+	 -o: Output file name [mandatory][e.g. -o myparatm]
         
-####Optional Parameters:
-        -int: Input target file name (txt with each segment per line) [note: this option is used for research only] [mandatory if -tms is a txt file, please provide the corresponding target file]
-        
+#### Optional Parameters:
+        -int: Input target file name (txt with each segment per line) [note: this option is used for research only] [mandatory if -tms is a txt file, please provide the corresponding target file]   
 -lth: Threshold for filtering based on length [ignored when -filtering off][optional, default: 39.0 ]
         -bth: Threshold for filtering based on maximum gap allowed in edit-distance(beam threshold)[ignored when -filtering off][optional, default: 35.0 ]
-
         -tmth: Cut off threshold for TM matching, only segments having similarity above this threshold will be used for paraphrasing [ignored when -filtering off][optional, default: 39.0 ]
-
         -nb: N-best-list size (e.g. if -nb 100, not more than top 100 candidates participate for paraphrasing) [ignored when -filtering off][optional, default: 100 ]
-
         -tok: Tokenization option (no: tokenization or any kind of preprocessing is not performed, stanford: used stanford tokenizer for tokenization and also remove tags before processing) [optional, default: stanford]
-
         -tag: Remove tags in preprocessing. Fuzzy score is calculated without tags and cleaned source and target segments are written in the output tmx file [optional, default: on]
-
         -punc: Remove punctuation when calculating fuzzy score (punctuations are not removed from the target side). [optional, default: on]
-
         -num: Replace number with a placeholder when calculating fuzzy score (numbers are not removed from the target side) [optional, default: off]
-
         -typp: Types of paraphrasing (comma separated e.g. -typp 1,2 (note: no space between options -typp 1,2 and not -typp 1, 2 or -typp 1 , 2  )) [optional, default: all four types of paraphrases 1,2,3,4]
-
         -infolevel: 0 for less information, 1 for moderate information and 2 for huge information e.g. -infolevel 1) [optional, default: 0, less information]
 
 #### Print Help:
